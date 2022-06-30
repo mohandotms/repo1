@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.spam.trap"
+        minSdk 30
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        exclude 'androidsupportmultidexversion.txt'
+        exclude 'META-INF/LICENSE.md'
+        exclude 'META-INF/NOTICE.md'
+    }
+
+
+}
+
+dependencies {
+//    implementation 'com.android.support:multidex:2.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+
+//    implementation files('libs\\flatlaf-2.0.jar')
+//    implementation files('libs\\jakarta.activation-1.2.2.jar')
+//    implementation files('libs\\bounce-0.18.jar')
+//    implementation files('libs\\core-1.1.jar')
+//    implementation files('libs\\arpack_combined_all-0.1.jar')
+//    implementation files('libs\\istack-commons-runtime-3.0.12.jar')
+//    implementation files('libs\\jakarta.xml.bind-api-2.3.3.jar')
+//    implementation files('libs\\java-cup-11b-20160615.jar')
+//    implementation files('libs\\jaxb-runtime-2.3.5.jar')
+//    implementation files('libs\\jclipboardhelper-0.1.0.jar')
+//    implementation files('libs\\jfilechooser-bookmarks-0.1.6.jar')
+//    implementation files('libs\\jniloader-1.1.jar')
+//    implementation files('libs\\mtj-1.0.4.jar')
+//    implementation files('libs\\native_ref-java-1.1.jar')
+//    implementation files('libs\\native_system-java-1.1.jar')
+//    implementation files('libs\\netlib-java-1.1.jar')
+//    implementation files('libs\\netlib-native_ref-linux-armhf-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_ref-linux-i686-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_ref-linux-x86_64-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_ref-win-i686-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_ref-win-x86_64-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_system-linux-armhf-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_system-linux-i686-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_system-linux-x86_64-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_system-win-i686-1.1-natives.jar')
+//    implementation files('libs\\netlib-native_system-win-x86_64-1.1-natives.jar')
+//    implementation files('libs\\txw2-2.3.5.jar')
+//    implementation files('libs\\weka-stable-3.8.6.jar')
+    implementation files('libs\\wekaSTRIPPED.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
